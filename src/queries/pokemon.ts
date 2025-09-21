@@ -6,16 +6,33 @@ export const GET_POKEMONS_INDEX = gql`
       id
       name
       image
+      evolutions {
+        id
+        name
+        classification
+      }
     }
   }
 `;
 
 export const GET_POKEMON_DETAILS = gql`
-  query GetPokemonDetails($id: String, $name: String) {
-    pokemon(id: $id, name: $name) {
+  query GetPokemonDetails($name: String!) {
+    pokemon(name: $name) {
       id
       name
       image
+      weight {
+        minimum
+        maximum
+      }
+      height {
+        minimum
+        maximum
+      }
+      classification
+      types
+      resistant
+      weaknesses
       attacks {
         fast {
           name

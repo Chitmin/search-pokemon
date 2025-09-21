@@ -2,9 +2,8 @@ export interface BasePokemon {
   id: string;
   name: string;
   image: string;
+  evolutions: PokemonEvolution[];
 }
-
-// UG9rZW1vbjowMDE= Bulbasaur
 
 export interface PokemonAttack {
   name: string;
@@ -19,6 +18,20 @@ export interface PokemonEvolution {
 }
 
 export interface Pokemon extends BasePokemon {
-  attack: Record<"fast" | "special", PokemonAttack[]>;
-  evolutions: PokemonEvolution[];
+  attack: {
+    fast: PokemonAttack[];
+    special: PokemonAttack[];
+  };
+  weight: {
+    minimum: string;
+    maximum: string;
+  };
+  height: {
+    minimum: string;
+    maximum: string;
+  };
+  classification: string;
+  types: string[];
+  resistant: string[];
+  weaknesses: string[];
 }
