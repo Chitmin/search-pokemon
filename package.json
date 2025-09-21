@@ -3,19 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "start": "next start",
+    "boot": "tsx src/bootstrap.ts",
+    "dev": "npm run boot && next dev --turbopack",
+    "build": "npm run boot && next build --turbopack",
+    "start": "npm run boot && next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@apollo/client": "^4.0.5",
+    "@apollo/client-integration-nextjs": "^0.13.1",
+    "@next/env": "^15.5.3",
+    "@radix-ui/react-slot": "^1.2.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "graphql": "^16.11.0",
     "lucide-react": "^0.544.0",
     "next": "15.5.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "tailwind-merge": "^3.3.1"
+    "tailwind-merge": "^3.3.1",
+    "tsx": "^4.20.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
