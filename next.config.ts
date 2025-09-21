@@ -1,7 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      // "https://img.pokemondb.net/artwork/pikachu.jpg"
+      {
+        protocol: "https",
+        hostname: "img.pokemondb.net",
+        pathname: "/artwork/**",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

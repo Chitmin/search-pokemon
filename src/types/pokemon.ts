@@ -1,8 +1,12 @@
-export interface BasePokemon {
+export interface PokemonIndex {
   id: string;
   name: string;
   image: string;
   evolutions: PokemonEvolution[];
+}
+
+export interface BasePokemon extends PokemonIndex {
+  slug: string;
 }
 
 export interface PokemonAttack {
@@ -18,7 +22,7 @@ export interface PokemonEvolution {
 }
 
 export interface Pokemon extends BasePokemon {
-  attack: {
+  attacks: {
     fast: PokemonAttack[];
     special: PokemonAttack[];
   };

@@ -13,6 +13,7 @@
     "@apollo/client": "^4.0.5",
     "@apollo/client-integration-nextjs": "^0.13.1",
     "@next/env": "^15.5.3",
+    "@radix-ui/react-separator": "^1.1.7",
     "@radix-ui/react-slot": "^1.2.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

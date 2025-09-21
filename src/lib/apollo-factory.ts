@@ -1,7 +1,7 @@
 import { HttpLink } from "@apollo/client";
 import { ApolloCache } from "@apollo/client";
 import { ApolloClient, InMemoryCache } from "@apollo/client";
-import "../../envConfig.js";
+import "../../envConfig.ts";
 
 const makeClient = (cache?: ApolloCache) =>
   new ApolloClient({

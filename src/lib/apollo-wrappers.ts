@@ -26,6 +26,6 @@ export const pokemonCache = new InMemoryCache({
   },
 });
 
-export const { getClient: pokemonClient } = registerApolloClient(() => {
+export const { getClient: getPokemonClient } = registerApolloClient(() => {
   return makeClient(pokemonCache);
 });
