@@ -19,7 +19,7 @@ export default function NoPokemon({
       </CardHeader>
       <CardContent>
         <small className="block mb-2">
-          Couldn't find any Pokémon matching your search.
+          Could not find any Pokémon matching your search.
         </small>
         {children}
       </CardContent>
