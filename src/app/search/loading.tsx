@@ -1,4 +1,4 @@
-import PokemonDetailsSkeleton from "@/components/pokemon-details-skeleton";
+import { PokemonDetailsSkeleton } from "@/components/pokemon-details";
 
 export default function Loading() {
   return (

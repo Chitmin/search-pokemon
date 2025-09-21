@@ -6,6 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import NoPokemon from "./no-pokemon";
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "./ui/skeleton";
 
 export default function PokemonFinder({
   pokemons,
@@ -54,6 +55,17 @@ export default function PokemonFinder({
             </Button>
           </NoPokemon>
         )}
+      </div>
+    </>
+  );
+}
+
+export function PokemonFinderSkeleton() {
+  return (
+    <>
+      <h1 className="mb-4 text-xl font-bold">Search Pokemon</h1>
+      <div className="flex flex-col items-start space-y-4">
+        <Skeleton className="h-10 w-full max-w-md rounded-md" />
       </div>
     </>
   );
