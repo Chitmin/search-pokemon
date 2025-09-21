@@ -12,6 +12,7 @@ import {
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "./ui/separator";
+import Link from "next/link";
 
 function BadgeList({ items }: { items: string[] }) {
   return (
@@ -81,12 +82,16 @@ export default function PokemonDetails({
             title="Evolutions"
           >
             <span className="flex gap-2 items-center">
-              {pokemon.name}{" "}
+              <Link href={`/search?name=${encodeURIComponent(pokemon.name)}`}>
+                {pokemon.name}
+              </Link>{" "}
               <MoveRight className="w-4 h-4 text-accent-foreground" />
             </span>
             {pokemon.evolutions.map((evo, i) => (
               <span className="flex gap-2 items-center" key={evo.id}>
-                {evo.name} {}{" "}
+                <Link href={`/search?name=${encodeURIComponent(evo.name)}`}>
+                  {evo.name}
+                </Link>{" "}
                 {i < pokemon.evolutions!.length - 1 && (
                   <MoveRight className="w-4 h-4 text-accent-foreground" />
                 )}
