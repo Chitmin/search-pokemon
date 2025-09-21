@@ -25,7 +25,6 @@ async function fetchBasePokemons() {
 
 fetchBasePokemons().then((res) => {
   const dir = path.join(process.cwd(), "/data");
-  console.log({ existsSync });
 
   try {
     if (!existsSync(dir)) {
@@ -40,7 +39,7 @@ fetchBasePokemons().then((res) => {
 
     writeFileSync(filename, JSON.stringify(res, null, 2));
   } catch (error) {
-    console.log(error);
+    console.error(error);
 
     exit(1);
   }

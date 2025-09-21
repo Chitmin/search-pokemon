@@ -1,12 +1,8 @@
-export interface PokemonIndex {
+export interface BasePokemon {
   id: string;
   name: string;
   image: string;
   evolutions: PokemonEvolution[];
-}
-
-export interface BasePokemon extends PokemonIndex {
-  slug: string;
 }
 
 export interface PokemonAttack {
@@ -17,7 +13,7 @@ export interface PokemonAttack {
 
 export interface PokemonEvolution {
   id: string;
-  name: number;
+  name: string;
   classification: string;
 }
 

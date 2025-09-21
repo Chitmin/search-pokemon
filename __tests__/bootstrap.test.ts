@@ -35,8 +35,8 @@ describe("store pokemons list as a side-effects on import", () => {
       query: jest.fn().mockResolvedValue({ data: { pokemons: fakePokemons } }),
     });
 
-    await import("./bootstrap");
-    await new Promise((r) => setImmediate(r));
+    await import("../src/bootstrap");
+    await new Promise((r) => setTimeout(r, 0));
 
     expect(fs.mkdirSync).toHaveBeenCalledWith(dir);
     expect(fs.unlinkSync).not.toHaveBeenCalled();

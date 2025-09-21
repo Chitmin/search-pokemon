@@ -40,7 +40,6 @@ export default function PokemonDetails({
           alt={pokemon.name}
           width={300}
           height={260}
-          priority
           placeholder="empty"
         />
         <div className="flex flex-col space-y-4">
