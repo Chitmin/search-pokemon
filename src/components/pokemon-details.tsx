@@ -30,7 +30,6 @@ export default function PokemonDetails({
 }: {
   pokemon: Readonly<Pokemon>;
 }) {
-  console.log({ evolutions: pokemon.evolutions });
   return (
     <div className="flex flex-col space-y-4">
       <div className="flex space-x-4">
@@ -40,6 +39,7 @@ export default function PokemonDetails({
           width={300}
           height={260}
           priority
+          placeholder="empty"
         />
         <div className="flex flex-col space-y-4">
           <h1 className="font-semibold text-xl md:text-2xl lg:text-3xl">
